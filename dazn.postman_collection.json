@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "78c80fe8-90b8-4b6d-8623-6516a81da7e0",
+		"name": "dazn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33391059"
+	},
+	"item": [
+		{
+			"name": "addMovie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"sample Movie3\",\r\n    \"rating\": 6,\r\n    \"genres\":[\"65ec4e01198f2f79fcf13736\", \"65ec4dff198f2f79fcf13716\", \"65ec4dff198f2f79fcf13714\"],\r\n    \"streamingLink\": \"https://www.youtube.com/watch?v=yAoLSRbwxL8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMovies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"movie1\",\r\n    \"rating\": 1,\r\n    \"genre\":[\"65ec4e01198f2f79fcf13736\",\"65ec4dff198f2f79fcf13714\"],\r\n    \"streamingLink\": \"hello world link\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchMovie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"movie1\",\r\n    \"rating\": 1,\r\n    \"genre\":[\"65ec4e01198f2f79fcf13736\",\"65ec4dff198f2f79fcf13714\"],\r\n    \"streamingLink\": \"hello world link\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/movies/search?q=action",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "action"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateMovie",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"sample movie edited\",\r\n    \"rating\": 10,\r\n    \"genres\":[\"65ec4e01198f2f79fcf13736\",\"65ec4dff198f2f79fcf13714\"],\r\n    \"streamingLink\":\"streamingLink sample\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/movies/65ec74123293e7a31605316c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"65ec74123293e7a31605316c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMovie",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"sample movie1\",\r\n    \"rating\": 1,\r\n    \"genre\":[\"65ec4e01198f2f79fcf13736\",\"65ec4dff198f2f79fcf13714\"],\r\n    \"streamingLink\": \"hello world link\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/movies/65ec73e73293e7a316053168",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"65ec73e73293e7a316053168"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addGenres",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/movies/addGenres",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"addGenres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getGenres",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/movies/getGenres",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"getGenres"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
