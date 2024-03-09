@@ -1,0 +1,5 @@
+{
+    "prettier.useEditorConfig": false,
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": true
+}

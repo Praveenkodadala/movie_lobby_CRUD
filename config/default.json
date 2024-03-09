@@ -1,0 +1,15 @@
+
+{
+    "NODE_ENV": "development",
+    "PORT": 3000,
+    "db": {
+      "host": "cluster0.pkl6jsh.mongodb.net",
+      "port": 27017,
+      "name": "dazn_moviedatabase",
+      "username": "myapproot",
+      "password": "7jH6miPhwVsbzdVT"
+    }
+ 
+  }
+
+  
